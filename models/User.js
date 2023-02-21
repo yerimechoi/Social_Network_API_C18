@@ -28,6 +28,7 @@ const userSchema = new Schema(
             virtuals: true,
             getters: true
         },
+        id: false,
     }
 );
 
