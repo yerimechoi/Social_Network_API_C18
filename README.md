@@ -13,7 +13,7 @@ This project was to build an API for a social network web application where user
 
   <a name="installationInstructions"></a>
   ## Installation Instructions
-  To access this project, you can click on the GitHub URL below and clone the repository to access locally.
+  To access this project, you can click on the GitHub URL below and clone the repository to access locally. Then, open up Insomnia and enter the URL with the port number.
 
   https://github.com/yerimechoi/Social_Network_API_C18
 
