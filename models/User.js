@@ -14,14 +14,14 @@ const userSchema = new Schema(
             unique: true,
             match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
         },
-        thoughts: {
+        thoughts: [{
             type: Schema.Types.ObjectId,
             ref: 'Thought'
-        },
-        friends: {
+        }],
+        friends: [{
             type: Schema.Types.ObjectId,
             ref: 'User'
-        }
+        }]
     },
     {
         toJSON: {
@@ -38,7 +38,12 @@ userSchema
         return this.friends.length;
     });
 
-
+    userSchema
+    .virtual('thoughtCount')
+    .get(function() {
+        return this.thoughts.length;
+    });
+    
 const User = model('User', userSchema);
 
 module.exports = User;
